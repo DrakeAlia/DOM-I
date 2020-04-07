@@ -57,7 +57,6 @@ navColor.forEach( element => {
   element.style.color = "green"
 });
 
-
 // console.log(navLinks)
 
 ///// Call to Action ////
