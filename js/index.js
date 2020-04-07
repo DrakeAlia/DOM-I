@@ -51,6 +51,7 @@ navLinks[3].textContent = siteContent["nav"]["nav-item-4"]
 navLinks[4].textContent = siteContent["nav"]["nav-item-5"]
 navLinks[5].textContent = siteContent["nav"]["nav-item-6"]
 
+/// Add Color ///
 let navColor = document.querySelectorAll('a')
 navColor.forEach( element => {
   element.style.color = "green"
