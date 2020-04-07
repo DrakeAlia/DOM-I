@@ -42,8 +42,13 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 logo.src = siteContent["nav"]["img-src"]
 
+
 /// Nav //////
 let navLinks = document.getElementsByTagName('a');
+
+let nav = document.querySelector('nav')
+
+
 navLinks[0].textContent = siteContent["nav"]["nav-item-1"]
 navLinks[1].textContent = siteContent["nav"]["nav-item-2"]
 navLinks[2].textContent = siteContent["nav"]["nav-item-3"]
@@ -56,6 +61,28 @@ let navColor = document.querySelectorAll('a')
 navColor.forEach( element => {
   element.style.color = "green"
 });
+
+// added social element ////
+const social = document.createElement('a')
+social.textContent = 'Social'
+social.setAttribute('href', '#' )
+
+social.style.color = 'green';
+
+
+nav.appendChild(social)
+
+
+// added places element ///
+const places = document.createElement('a')
+places.textContent = 'Places'
+places.setAttribute('href', '#')
+
+places.style.color = 'green';
+
+nav.prepend(places)
+
+
 
 // console.log(navLinks)
 
