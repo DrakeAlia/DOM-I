@@ -39,22 +39,35 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.src = siteContent["nav"]["img-src"]
 
-let navigation = document.querySelectorAll ("nav a");
+let links = document.getElementsByTagName('a');
+links[0].textContent = siteContent["nav"]["nav-item-1"]
+links[1].textContent = siteContent["nav"]["nav-item-2"]
+links[2].textContent = siteContent["nav"]["nav-item-3"]
+links[3].textContent = siteContent["nav"]["nav-item-4"]
+links[4].textContent = siteContent["nav"]["nav-item-5"]
+links[5].textContent = siteContent["nav"]["nav-item-6"]
 
-navigation[0] .textContent = siteContent["nav"]["nav-item-1"];
-navigation[1] .textContent = siteContent["nav"]["nav-item-2"];
-navigation[2] .textContent = siteContent["nav"]["nav-item-3"];
-navigation[3] .textContent = siteContent["nav"]["nav-item-4"];
-navigation[4] .textContent = siteContent["nav"]["nav-item-5"];
-navigation[5] .textContent = siteContent["nav"]["nav-item-6"];
+let navColor = document.querySelectorAll('a')
+navColor.forEach( element => {
+  element.style.color = "green"
+});
 
-let logoTitle = document.querySelector("h1");
-logoTitle.textContent = siteContent["cta"]["h1"];
 
-let heroImg = document.getElementById('cta-img');
-heroImg.setAttribute('src', siteContent['cta']['img-src']);
+let title = document.querySelector("h1");
+title.textContent = siteContent["cta"]["h1"];
 
-let startBtn = document.querySelector ("button");
-startBtn.textContent = siteContent ["cta"]["button"];
+
+let btn = document.getElementsByTagName('button')
+btn[0].textContent = siteContent["cta"]["button"]
+console.log(btn)
+
+let ctaLogo = document.querySelector("#cta-img");
+ctaLogo.src = siteContent["cta"]["img-src"];
+
+
+
+
+
