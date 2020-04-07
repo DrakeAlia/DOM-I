@@ -39,31 +39,22 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-const navItems = document.querySelectorAll('nav a');
+let navigation = document.querySelectorAll ("nav a");
 
-let servicesLink = document.querySelector('a');
-servicesLink.textContent = siteContent['nav']['nav-item-1'];
+navigation[0] .textContent = siteContent["nav"]["nav-item-1"];
+navigation[1] .textContent = siteContent["nav"]["nav-item-2"];
+navigation[2] .textContent = siteContent["nav"]["nav-item-3"];
+navigation[3] .textContent = siteContent["nav"]["nav-item-4"];
+navigation[4] .textContent = siteContent["nav"]["nav-item-5"];
+navigation[5] .textContent = siteContent["nav"]["nav-item-6"];
 
-let productLink = navItems[1];
-productLink.textContent = siteContent['nav']['nav-item-2'];
+let logoTitle = document.querySelector("h1");
+logoTitle.textContent = siteContent["cta"]["h1"];
 
-let visionLink = navItems[2];
-visionsLink.textContent = siteContent['nav']['nav-item-3'];
+let heroImg = document.getElementById('cta-img');
+heroImg.setAttribute('src', siteContent['cta']['img-src']);
 
-let featuresLink = navItems[3];
-featuresLink.textContent = siteContent['nav']['nav-item-4'];
-
-let aboutLink = navItems[4];
-aboutLink.textContent = siteContent['nav']['nav-item-5'];
-
-let contactLink = navItems[5];
-contactLink.textContent = siteContent['nav']['nav-item-6'];
-
-let title = document.querySelector('h1');
-title.textContent = siteContent['cta']['h1'];
-
-let buttonText = document.querySelector('button');
-buttonText.textContent = siteContent['cta']['button'];
-
+let startBtn = document.querySelector ("button");
+startBtn.textContent = siteContent ["cta"]["button"];
